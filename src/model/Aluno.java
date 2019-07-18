@@ -3,12 +3,22 @@ package model;
 import java.util.Date;
 
 public class Aluno {
+	
+	private int id;
 	private String nome;
 	private String sobrenome;
 	private String rg;
 	private String cpf;
 	private Date nascimento;
 	private Endereco endereco;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 	
 	public String getNome() {
 		return nome;
