@@ -12,13 +12,28 @@ public class Aluno {
 	private Date nascimento;
 	private Endereco endereco;
 	
+	public Aluno() {
+	
+	}
+	
+	public Aluno(String nome, String sobrenome, String rg, String cpf, Endereco endereco) {
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.rg = rg;
+		this.cpf = cpf;
+		this.endereco = endereco;
+	}
+
+	public Aluno(String nome) {
+		this.nome = nome;
+	}
+	
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	
 	
 	public String getNome() {
 		return nome;

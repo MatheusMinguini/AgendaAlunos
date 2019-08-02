@@ -18,13 +18,11 @@ public class AlunoUtil {
 		endereco.setCidade(request.getParameter("cidade"));
 		endereco.setEstado(request.getParameter("estado"));
 		
-		Aluno aluno = new Aluno();
-		aluno.setNome(request.getParameter("nome"));
-		aluno.setSobrenome(request.getParameter("sobrenome"));
-		aluno.setRg(request.getParameter("rg"));
-		aluno.setCpf(request.getParameter("cpf"));
-		//aluno.setNascimento(request.getParameter("nascimento"));
-		aluno.setEndereco(endereco);
+		Aluno aluno = new Aluno(
+				request.getParameter("nome"), 
+				request.getParameter("sobrenome"), 
+				request.getParameter("rg"),
+				request.getParameter("cpf"), endereco);
 		
 		return aluno;
 	}
